@@ -1,0 +1,1036 @@
+<html prefix="og: http://ogp.me/ns#" style="--scroll_width: 12px;" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Wordle Game - Play Unlimited</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Play Wordle with unlimited words! Guess words from 4 to 11 letters in different languages and create your own puzzles. Can you guess the hidden word in 6 tries?">
+    <meta name="keywords" content="wordle, game, puzzle, word, words, letters, play, online, guess">
+
+    <meta property="og:title" content="Wordle Game - Play Unlimited">
+    <meta property="og:description" content="Play Wordle with unlimited words! Guess words from 4 to 11 letters in different languages and create your own puzzles. Can you guess the hidden word in 6 tries?">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Wordle Game - Play Unlimited">
+    <meta property="og:width" content="1024">
+    <meta property="og:height" content="1024">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Wordle Game - Play Unlimited">
+    <meta name="twitter:description" content="Play Wordle with unlimited words! Guess words from 4 to 11 letters in different languages and create your own puzzles. Can you guess the hidden word in 6 tries?">
+
+    <meta name="csrf-token" content="anIUTmbKlxPbjyd2HhcsO7mbIIo26iw2Q4iuB3rV">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#57ac57">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <style type="text/css">
+        #st-1 {
+            font-family: "Helvetica Neue", Verdana, Helvetica, Arial, sans-serif;
+            ;
+            direction: ltr;
+            display: block;
+            opacity: 1;
+            text-align: center;
+            z-index: 94034;
+        }
+
+        #st-1.st-animated {
+            -moz-transition: o 0.2s ease-in, p 0.2s ease-in, a 0.2s ease-in, c 0.2s ease-in, i 0.2s ease-in, t 0.2s ease-in, y 0.2s ease-in;
+            -ms-transition: o 0.2s ease-in, p 0.2s ease-in, a 0.2s ease-in, c 0.2s ease-in, i 0.2s ease-in, t 0.2s ease-in, y 0.2s ease-in;
+            -o-transition: o 0.2s ease-in, p 0.2s ease-in, a 0.2s ease-in, c 0.2s ease-in, i 0.2s ease-in, t 0.2s ease-in, y 0.2s ease-in;
+            -webkit-transition: o 0.2s ease-in, p 0.2s ease-in, a 0.2s ease-in, c 0.2s ease-in, i 0.2s ease-in, t 0.2s ease-in, y 0.2s ease-in;
+            transition: o 0.2s ease-in, p 0.2s ease-in, a 0.2s ease-in, c 0.2s ease-in, i 0.2s ease-in, t 0.2s ease-in, y 0.2s ease-in;
+        }
+
+        #st-1.st-hidden {
+            opacity: 0;
+        }
+
+        #st-1.st-hide {
+            display: none;
+        }
+
+        #st-1 .st-btn {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -moz-transition: opacity 0.2s ease-in, top 0.2s ease-in;
+            -ms-transition: opacity 0.2s ease-in, top 0.2s ease-in;
+            -o-transition: opacity 0.2s ease-in, top 0.2s ease-in;
+            -webkit-transition: opacity 0.2s ease-in, top 0.2s ease-in;
+            transition: opacity 0.2s ease-in, top 0.2s ease-in;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 11px;
+            height: 32px;
+            line-height: 32px;
+            margin-right: 8px;
+            padding: 0 8px;
+            position: relative;
+            text-align: center;
+            top: 0;
+            vertical-align: top;
+            white-space: nowrap;
+        }
+
+        #st-1 .st-btn:last-child {
+            margin-right: 0;
+        }
+
+        #st-1 .st-btn>svg {
+            height: 16px;
+            width: 16px;
+            position: relative;
+            top: 8px;
+            vertical-align: top;
+        }
+
+        #st-1 .st-btn>img {
+            display: inline-block;
+            height: 16px;
+            width: 16px;
+            position: relative;
+            top: 8px;
+            vertical-align: top;
+        }
+
+        #st-1 .st-btn>span {
+            -moz-transition: all 0.2s ease-in;
+            -ms-transition: all 0.2s ease-in;
+            -o-transition: all 0.2s ease-in;
+            -webkit-transition: all 0.2s ease-in;
+            transition: all 0.2s ease-in;
+            color: #fff;
+            display: inline-block;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            min-width: 60px;
+            opacity: 1;
+            padding: 0 6px;
+            position: relative;
+            vertical-align: top;
+        }
+
+        #st-1.st-has-labels .st-btn {
+            min-width: 120px;
+        }
+
+        #st-1.st-has-labels .st-btn.st-remove-label {
+            min-width: 50px;
+        }
+
+        #st-1.st-has-labels .st-btn.st-remove-label>span {
+            display: none;
+        }
+
+        #st-1.st-has-labels .st-btn.st-hide-label>span {
+            display: none;
+        }
+
+        #st-1 .st-total {
+            color: #555;
+            display: inline-block;
+            font-weight: 500;
+            line-height: 12px;
+            margin-right: 0;
+            max-width: 80px;
+            padding: 4px 8px;
+            text-align: center;
+        }
+
+        #st-1 .st-total.st-hidden {
+            display: none;
+        }
+
+        #st-1 .st-total>span {
+            font-size: 16px;
+            line-height: 17px;
+            display: block;
+            padding: 0;
+        }
+
+        #st-1 .st-total>span.st-shares {
+            font-size: 9px;
+            line-height: 9px;
+        }
+
+        #st-1.st-justified {
+            display: flex;
+            text-align: center;
+        }
+
+        #st-1.st-justified .st-btn {
+            -moz-flex: 1;
+            -ms-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
+        }
+
+        #st-1 .st-btn:hover {
+            opacity: .8;
+            top: -4px;
+        }
+
+        #st-1 .st-btn[data-network='facebook'] {
+            background-color: #4267B2
+        }
+
+        #st-1 .st-btn[data-network='facebook'] img {
+            filter:
+        }
+
+        #st-1 .st-btn[data-network='facebook']>span {
+            color: #fff
+        }
+
+        #st-1 .st-btn[data-network='twitter'] {
+            background-color: #55acee
+        }
+
+        #st-1 .st-btn[data-network='twitter'] img {
+            filter:
+        }
+
+        #st-1 .st-btn[data-network='twitter']>span {
+            color: #fff
+        }
+
+        #st-1 .st-btn[data-network='whatsapp'] {
+            background-color: #25d366
+        }
+
+        #st-1 .st-btn[data-network='whatsapp'] img {
+            filter:
+        }
+
+        #st-1 .st-btn[data-network='whatsapp']>span {
+            color: #fff
+        }
+
+        #st-1 .st-btn[data-network='messenger'] {
+            background-color: #448AFF
+        }
+
+        #st-1 .st-btn[data-network='messenger'] img {
+            filter:
+        }
+
+        #st-1 .st-btn[data-network='messenger']>span {
+            color: #fff
+        }
+
+        #st-1 .st-btn[data-network='reddit'] {
+            background-color: #ff4500
+        }
+
+        #st-1 .st-btn[data-network='reddit'] img {
+            filter:
+        }
+
+        #st-1 .st-btn[data-network='reddit']>span {
+            color: #fff
+        }
+
+        #st-1 .st-btn[data-network='snapchat']>span {
+            color: #333
+        }
+
+        ;
+        }
+    </style>
+</head>
+
+<body class=" " style="cursor: default;">
+    <div class="page">
+        <div class="page__wrapper">
+
+            <section class="section section--full section--main">
+                <div class="container no-pading">
+
+                    <div class="wrap">
+                        <div class="main">
+
+                            <div id="root">
+                                <div class="App-container">
+                                    <div class="Game" style="display: block;">
+                                        <header>
+                                            <div class="logo"><a href="/"><img src="/assets/img/logo.svg?v39.26" alt="Wordle Game"></a></div>
+                                            <div class="cont flex"><a class="lang mini_modal_link" data-modal-id="#modal_languages"><span class="icon"><svg width="16" height="16">
+                                                            <use xlink:href="/assets/img/spritesvg.svg?v39.26#en"></use>
+                                                        </svg></span>EN</a><button type="button" class="generator" style="display: block;"><svg width="20" height="20">
+                                                        <use xlink:href="/assets/img/spritesvg.svg?v39.26#ic_generator"></use>
+                                                    </svg></button><button type="button" class="give_up" style="display: block;">Give up</button>
+                                                <div class="buttons flex"><button type="button" class="button mini_modal_link" data-modal-id="#modal_stats"><svg width="20" height="20">
+                                                            <use xlink:href="/assets/img/spritesvg.svg?v39.26#ic_stats"></use>
+                                                        </svg></button><button type="button" class="button mini_modal_link" data-modal-id="#modal_settings"><svg width="22" height="22">
+                                                            <use xlink:href="/assets/img/spritesvg.svg?v39.26#ic_settings"></use>
+                                                        </svg></button><button type="button" class="button mini_modal_link" data-modal-id="#modal_info"><svg width="22" height="22">
+                                                            <use xlink:href="/assets/img/spritesvg.svg?v39.26#ic_info"></use>
+                                                        </svg></button></div>
+                                            </div>
+                                        </header>
+                                        <div class="mini_modal" id="modal_languages">
+                                            <div class="top">Dictionary</div>
+                                            <div class="data">
+                                                <div class="cont">
+                                                    <div class="main_title center">Select Dictionary</div>
+                                                    <div class="main_desc center">Select a game dictionary (opens in a new tab)</div>
+                                                    <div class="languages flex"><a href="/" class="lang_checkbox lang_checkbox_selected" target="_blank"><label class="label_check"><span class="check_text"><span class="icon"><svg>
+                                                                            <use xlink:href="/assets/img/spritesvg.svg?v39.26#en"></use>
+                                                                        </svg></span>English (US)</span></label></a><a href="/uk" class="lang_checkbox " target="_blank"><label class="label_check"><span class="check_text"><span class="icon"><svg>
+                                                                            <use xlink:href="/assets/img/spritesvg.svg?v39.26#uk"></use>
+                                                                        </svg></span>English (UK)</span></label></a><a href="/wordle-for-kids" class="lang_checkbox " target="_blank"><label class="label_check"><span class="check_text"><span
+                                                                        class="icon"><svg>
+                                                                            <use xlink:href="/assets/img/spritesvg.svg?v39.26#kids"></use>
+                                                                        </svg></span>English (Kids)</span></label></a><a href="/es" class="lang_checkbox " target="_blank"><label class="label_check"><span class="check_text"><span class="icon"><svg>
+                                                                            <use xlink:href="/assets/img/spritesvg.svg?v39.26#es"></use>
+                                                                        </svg></span>Español</span></label></a><a href="/fr" class="lang_checkbox " target="_blank"><label class="label_check"><span class="check_text"><span class="icon"><svg>
+                                                                            <use xlink:href="/assets/img/spritesvg.svg?v39.26#fr"></use>
+                                                                        </svg></span>Français</span></label></a><a href="/de" class="lang_checkbox " target="_blank"><label class="label_check"><span class="check_text"><span class="icon"><svg>
+                                                                            <use xlink:href="/assets/img/spritesvg.svg?v39.26#de"></use>
+                                                                        </svg></span>Deutsch</span></label></a><a href="/pt" class="lang_checkbox " target="_blank"><label class="label_check"><span class="check_text"><span class="icon"><svg>
+                                                                            <use xlink:href="/assets/img/spritesvg.svg?v39.26#pt"></use>
+                                                                        </svg></span>Português</span></label></a><a href="/it" class="lang_checkbox " target="_blank"><label class="label_check"><span class="check_text"><span class="icon"><svg>
+                                                                            <use xlink:href="/assets/img/spritesvg.svg?v39.26#it"></use>
+                                                                        </svg></span>Italiano</span></label></a><a href="/nl" class="lang_checkbox " target="_blank"><label class="label_check"><span class="check_text"><span class="icon"><svg>
+                                                                            <use xlink:href="/assets/img/spritesvg.svg?v39.26#nl"></use>
+                                                                        </svg></span>Nederlands</span></label></a><a href="/ru" class="lang_checkbox " target="_blank"><label class="label_check"><span class="check_text"><span class="icon"><svg>
+                                                                            <use xlink:href="/assets/img/spritesvg.svg?v39.26#ru"></use>
+                                                                        </svg></span>Русский</span></label></a><a href="/pl" class="lang_checkbox " target="_blank"><label class="label_check"><span class="check_text"><span class="icon"><svg>
+                                                                            <use xlink:href="/assets/img/spritesvg.svg?v39.26#pl"></use>
+                                                                        </svg></span>Polski</span></label></a><a href="/ua" class="lang_checkbox " target="_blank"><label class="label_check"><span class="check_text"><span class="icon"><svg>
+                                                                            <use xlink:href="/assets/img/spritesvg.svg?v39.26#ua"></use>
+                                                                        </svg></span>Український</span></label></a><a href="/sv" class="lang_checkbox " target="_blank"><label class="label_check"><span class="check_text"><span class="icon"><svg>
+                                                                            <use xlink:href="/assets/img/spritesvg.svg?v39.26#sv"></use>
+                                                                        </svg></span>Svenska</span></label></a><a href="/ie" class="lang_checkbox " target="_blank"><label class="label_check"><span class="check_text"><span class="icon"><svg>
+                                                                            <use xlink:href="/assets/img/spritesvg.svg?v39.26#ie"></use>
+                                                                        </svg></span>Gaeilge</span></label></a><a href="/cs" class="lang_checkbox " target="_blank"><label class="label_check"><span class="check_text"><span class="icon"><svg>
+                                                                            <use xlink:href="/assets/img/spritesvg.svg?v39.26#cs"></use>
+                                                                        </svg></span>Čeština</span></label></a><a href="/el" class="lang_checkbox " target="_blank"><label class="label_check"><span class="check_text"><span class="icon"><svg>
+                                                                            <use xlink:href="/assets/img/spritesvg.svg?v39.26#el"></use>
+                                                                        </svg></span>Ελληνικά</span></label></a><a href="/tr" class="lang_checkbox " target="_blank"><label class="label_check"><span class="check_text"><span class="icon"><svg>
+                                                                            <use xlink:href="/assets/img/spritesvg.svg?v39.26#tr"></use>
+                                                                        </svg></span>Türkçe</span></label></a><a href="/id" class="lang_checkbox " target="_blank"><label class="label_check"><span class="check_text"><span class="icon"><svg>
+                                                                            <use xlink:href="/assets/img/spritesvg.svg?v39.26#id"></use>
+                                                                        </svg></span>Indonesian</span></label></a><a href="/ph" class="lang_checkbox " target="_blank"><label class="label_check"><span class="check_text"><span class="icon"><svg>
+                                                                            <use xlink:href="/assets/img/spritesvg.svg?v39.26#ph"></use>
+                                                                        </svg></span>Filipino</span></label></a></div>
+                                                </div>
+                                            </div><button type="button" class="close"></button>
+                                        </div>
+                                        <div class="mini_modal" id="modal_settings">
+                                            <div class="top">Settings</div>
+                                            <div class="data">
+                                                <div class="cont">
+                                                    <div class="main_title center">Number of Letters</div>
+                                                    <div class="numbers flex">
+                                                        <div class="number_checkbox"><label class="label_check"><input type="radio" name="numbers" autocomplete="off" value="4"><span class="check_text">4</span></label></div>
+                                                        <div class="number_checkbox"><label class="label_check"><input type="radio" name="numbers" autocomplete="off" value="5" checked=""><span class="check_text">5</span></label></div>
+                                                        <div class="number_checkbox"><label class="label_check"><input type="radio" name="numbers" autocomplete="off" value="6"><span class="check_text">6</span></label></div>
+                                                        <div class="number_checkbox"><label class="label_check"><input type="radio" name="numbers" autocomplete="off" value="7"><span class="check_text">7</span></label></div>
+                                                        <div class="number_checkbox"><label class="label_check"><input type="radio" name="numbers" autocomplete="off" value="8"><span class="check_text">8</span></label></div>
+                                                        <div class="number_checkbox"><label class="label_check"><input type="radio" name="numbers" autocomplete="off" value="9"><span class="check_text">9</span></label></div>
+                                                        <div class="number_checkbox"><label class="label_check"><input type="radio" name="numbers" autocomplete="off" value="10"><span class="check_text">10</span></label></div>
+                                                        <div class="number_checkbox"><label class="label_check"><input type="radio" name="numbers" autocomplete="off" value="11"><span class="check_text">11</span></label></div>
+                                                    </div>
+                                                    <hr>
+                                                    <div class="main_title toggle">Hard Mode</div>
+                                                    <div class="main_desc toggle">Any revealed hints must be used in subsequent guesses</div>
+                                                    <div class="checkbox"><label class="label_check"><input type="checkbox" autocomplete="off"><span class="check_text"></span></label></div>
+                                                    <hr>
+                                                    <div class="main_title toggle">Daily Mode</div>
+                                                    <div class="main_desc toggle">Guess a chain of words from 4 to 11 letters every 24 hours</div><br>
+                                                    <div class="main_desc toggle">Next word update in <b class="countdown">04:12:48</b></div>
+                                                    <div class="checkbox"><label class="label_check"><input type="checkbox" autocomplete="off"><span class="check_text"></span></label></div>
+                                                    <hr>
+                                                    <div class="main_title toggle">Dark Mode</div>
+                                                    <div class="main_desc toggle">Change dark and light mode</div>
+                                                    <div class="checkbox"><label class="label_check"><input type="checkbox" name="dark_mode" autocomplete="off"><span class="check_text"></span></label></div>
+                                                    <hr>
+                                                    <div class="main_title toggle">Color Blind Mode</div>
+                                                    <div class="main_desc toggle">High contrast colors</div>
+                                                    <div class="checkbox"><label class="label_check"><input type="checkbox" name="color_blind_mode" autocomplete="off"><span class="check_text"></span></label></div>
+                                                    <hr>
+                                                    <div class="main_title toggle">Letter Hints</div>
+                                                    <div class="main_desc toggle">Hint above the letter that it appears twice or more in the hidden word</div>
+                                                    <div class="checkbox"><label class="label_check"><input type="checkbox" autocomplete="off"><span class="check_text"></span></label></div>
+                                                    <hr>
+                                                    <div class="main_title toggle">Confetti Animation</div>
+                                                    <div class="main_desc toggle">Confetti animation when the game is won</div>
+                                                    <div class="checkbox"><label class="label_check"><input type="checkbox" name="confetti_mode" autocomplete="off"><span class="check_text"></span></label></div>
+                                                    <hr>
+                                                    <div class="main_title toggle">Swap Buttons</div>
+                                                    <div class="main_desc toggle">Swap “Enter” and “Backspace” buttons</div>
+                                                    <div class="checkbox"><label class="label_check"><input type="checkbox" autocomplete="off"><span class="check_text"></span></label></div>
+                                                </div>
+                                            </div><button type="button" class="close"></button>
+                                        </div>
+                                        <div class="modal_finish ">
+                                            <div class="top lost">Wordle Generator</div>
+                                            <div class="data">
+                                                <div class="cont">
+                                                    <div class="desc">Challenge your friend with any word from 4 to 11 letters:</div>
+                                                    <div class="line_form">
+                                                        <div class="field"><input type="text" name="input" class="input" placeholder="Your word ..." minlength="4" maxlength="11" value=""></div>
+                                                    </div>
+                                                    <div class="desc valid" style="display: none;">Link Copied!</div>
+                                                    <div class="desc not_valid" style="display: none;">Word not found</div>
+                                                    <div class="copy_btn"><button type="button">Copy link</button></div>
+                                                </div>
+                                            </div><button type="button" class="close"><svg width="12" height="12">
+                                                    <use xlink:href="/assets/img/spritesvg.svg?v39.26#ic_close"></use>
+                                                </svg></button>
+                                        </div>
+                                        <div class="game_rows">
+                                            <div class="Row Row-locked-in">
+                                                <div class="Row-letter letter-absent" data-animation="none">p<sup style="display: none;">1</sup></div>
+                                                <div class="Row-letter letter-absent" data-animation="none">l<sup style="display: none;">1</sup></div>
+                                                <div class="Row-letter letter-elsewhere" data-animation="none">a<sup style="display: none;">1</sup></div>
+                                                <div class="Row-letter letter-absent" data-animation="none">c<sup style="display: none;">1</sup></div>
+                                                <div class="Row-letter letter-elsewhere" data-animation="none">e<sup style="display: none;">1</sup></div>
+                                            </div>
+                                            <div class="Row Row-locked-in">
+                                                <div class="Row-letter letter-elsewhere" data-animation="none">a<sup style="display: none;">1</sup></div>
+                                                <div class="Row-letter letter-absent" data-animation="none">d<sup style="display: none;">1</sup></div>
+                                                <div class="Row-letter letter-absent" data-animation="none">d<sup style="display: none;">1</sup></div>
+                                                <div class="Row-letter letter-correct" data-animation="none">e<sup style="display: none;">1</sup></div>
+                                                <div class="Row-letter letter-absent" data-animation="none">d<sup style="display: none;">1</sup></div>
+                                            </div>
+                                            <div class="Row">
+                                                <div class="Row-letter" data-animation="none"><sup style="display: none;"></sup></div>
+                                                <div class="Row-letter" data-animation="none"><sup style="display: none;"></sup></div>
+                                                <div class="Row-letter" data-animation="none"><sup style="display: none;"></sup></div>
+                                                <div class="Row-letter" data-animation="none"><sup style="display: none;"></sup></div>
+                                                <div class="Row-letter" data-animation="none"><sup style="display: none;"></sup></div>
+                                            </div>
+                                            <div class="Row">
+                                                <div class="Row-letter" data-animation="none"><sup style="display: none;"></sup></div>
+                                                <div class="Row-letter" data-animation="none"><sup style="display: none;"></sup></div>
+                                                <div class="Row-letter" data-animation="none"><sup style="display: none;"></sup></div>
+                                                <div class="Row-letter" data-animation="none"><sup style="display: none;"></sup></div>
+                                                <div class="Row-letter" data-animation="none"><sup style="display: none;"></sup></div>
+                                            </div>
+                                            <div class="Row">
+                                                <div class="Row-letter" data-animation="none"><sup style="display: none;"></sup></div>
+                                                <div class="Row-letter" data-animation="none"><sup style="display: none;"></sup></div>
+                                                <div class="Row-letter" data-animation="none"><sup style="display: none;"></sup></div>
+                                                <div class="Row-letter" data-animation="none"><sup style="display: none;"></sup></div>
+                                                <div class="Row-letter" data-animation="none"><sup style="display: none;"></sup></div>
+                                            </div>
+                                            <div class="Row">
+                                                <div class="Row-letter" data-animation="none"><sup style="display: none;"></sup></div>
+                                                <div class="Row-letter" data-animation="none"><sup style="display: none;"></sup></div>
+                                                <div class="Row-letter" data-animation="none"><sup style="display: none;"></sup></div>
+                                                <div class="Row-letter" data-animation="none"><sup style="display: none;"></sup></div>
+                                                <div class="Row-letter" data-animation="none"><sup style="display: none;"></sup></div>
+                                            </div>
+                                        </div>
+                                        <div class="message" style="display: none;">Challenge Mode</div>
+                                        <div class="message" style="display: none;">Daily Mode</div>
+                                        <div class="message" style="display: none;"><b>You Won! 🏆</b></div>
+                                        <div class="message" style="display: none;"><b>You Lost!</b></div>
+                                        <div class="Game-keyboard">
+                                            <div class="Game-keyboard-row">
+                                                <div tabindex="-1" class="Game-keyboard-button">q</div>
+                                                <div tabindex="-1" class="Game-keyboard-button">w</div>
+                                                <div tabindex="-1" class="Game-keyboard-button letter-correct">e</div>
+                                                <div tabindex="-1" class="Game-keyboard-button">r</div>
+                                                <div tabindex="-1" class="Game-keyboard-button">t</div>
+                                                <div tabindex="-1" class="Game-keyboard-button">y</div>
+                                                <div tabindex="-1" class="Game-keyboard-button">u</div>
+                                                <div tabindex="-1" class="Game-keyboard-button">i</div>
+                                                <div tabindex="-1" class="Game-keyboard-button">o</div>
+                                                <div tabindex="-1" class="Game-keyboard-button letter-absent">p</div>
+                                            </div>
+                                            <div class="Game-keyboard-row">
+                                                <div tabindex="-1" class="Game-keyboard-button letter-elsewhere">a</div>
+                                                <div tabindex="-1" class="Game-keyboard-button">s</div>
+                                                <div tabindex="-1" class="Game-keyboard-button letter-absent">d</div>
+                                                <div tabindex="-1" class="Game-keyboard-button">f</div>
+                                                <div tabindex="-1" class="Game-keyboard-button">g</div>
+                                                <div tabindex="-1" class="Game-keyboard-button">h</div>
+                                                <div tabindex="-1" class="Game-keyboard-button">j</div>
+                                                <div tabindex="-1" class="Game-keyboard-button">k</div>
+                                                <div tabindex="-1" class="Game-keyboard-button letter-absent">l</div>
+                                            </div>
+                                            <div class="Game-keyboard-row">
+                                                <div tabindex="-1" class="Game-keyboard-button Game-keyboard-button-wide"><svg width="22" height="22">
+                                                        <use xlink:href="/assets/img/spritesvg.svg?v39.26#backspace"></use>
+                                                    </svg></div>
+                                                <div tabindex="-1" class="Game-keyboard-button">z</div>
+                                                <div tabindex="-1" class="Game-keyboard-button">x</div>
+                                                <div tabindex="-1" class="Game-keyboard-button letter-absent">c</div>
+                                                <div tabindex="-1" class="Game-keyboard-button">v</div>
+                                                <div tabindex="-1" class="Game-keyboard-button">b</div>
+                                                <div tabindex="-1" class="Game-keyboard-button">n</div>
+                                                <div tabindex="-1" class="Game-keyboard-button">m</div>
+                                                <div tabindex="-1" class="Game-keyboard-button Game-keyboard-button-wide">Enter</div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="alert" style=""></div>
+                                        </div>
+                                        <div class="modal_finish  ">
+                                            <div class="top "> </div>
+                                            <div class="data">
+                                                <div class="cont">
+                                                    <div class="desc">The answer was:</div>
+                                                    <div class="word"><span>_____</span></div><a class="definition" href="/dictionary?q=ramen+definition" target="_blank">What does this word mean?</a>
+                                                    <div class="restart_btn"><button type="button">Restart</button></div>
+                                                    <div class="or_text">or press Enter to play again</div>
+                                                    <div class="block_share">
+                                                        <div class="share_btn"><button type="button"><svg class="icon">
+                                                                    <use xlink:href="/assets/img/spritesvg.svg?v39.26#ic_share"></use>
+                                                                </svg>Share your result!</button></div>
+                                                        <div class="links flex"><a class="twitter_btn"
+                                                                href="https://www.twitter.com/share?url=https://wordlegame.org/&amp;text=I%20guessed%20this%205-letter%20word%20in%202%2F6%20tries.%20%0A%0A%E2%AC%9B%E2%AC%9B%F0%9F%9F%A8%E2%AC%9B%F0%9F%9F%A8%0A%F0%9F%9F%A8%E2%AC%9B%E2%AC%9B%F0%9F%9F%A9%E2%AC%9B%0A%0ACan%20you%20guess%20this%20word%3F%20%0Ahttps%3A%2F%2Fwordlegame.org%2F%3Fchallenge%3DcmFtZW4"
+                                                                target="_blank">Twitter</a><a class="facebook_btn" href="https://www.facebook.com/sharer/sharer.php?u=https://wordlegame.org/" target="_blank">Facebook</a><a class="whatsapp_btn"
+                                                                href="https://api.whatsapp.com/send?text=I%20guessed%20this%205-letter%20word%20in%202%2F6%20tries.%20%0A%0A%E2%AC%9B%E2%AC%9B%F0%9F%9F%A8%E2%AC%9B%F0%9F%9F%A8%0A%F0%9F%9F%A8%E2%AC%9B%E2%AC%9B%F0%9F%9F%A9%E2%AC%9B%0A%0ACan%20you%20guess%20this%20word%3F%20%0Ahttps%3A%2F%2Fwordlegame.org%2F%3Fchallenge%3DcmFtZW4"
+                                                                target="_blank">WhatsApp</a><a class="reddit_btn"
+                                                                href="https://www.reddit.com/submit?url=https://wordlegame.org/&amp;title=I%20guessed%20this%205-letter%20word%20in%202%2F6%20tries.%20%0A%0A%E2%AC%9B%E2%AC%9B%F0%9F%9F%A8%E2%AC%9B%F0%9F%9F%A8%0A%F0%9F%9F%A8%E2%AC%9B%E2%AC%9B%F0%9F%9F%A9%E2%AC%9B%0A%0ACan%20you%20guess%20this%20word%3F%20%0Ahttps%3A%2F%2Fwordlegame.org%2F%3Fchallenge%3DcmFtZW4"
+                                                                target="_blank">Reddit</a></div>
+                                                    </div>
+                                                    <div class="link"><a href="javascript:void(0)"><svg class="icon">
+                                                                <use xlink:href="/assets/img/spritesvg.svg?v39.26#ic_puzzle"></use>
+                                                            </svg>Copy your puzzle with emojis</a></div>
+                                                    <div class="link"><a href="javascript:void(0)"><svg class="icon">
+                                                                <use xlink:href="/assets/img/spritesvg.svg?v39.26#ic_link"></use>
+                                                            </svg>Copy link to this word</a></div>
+                                                    <div class="link"><a href="javascript:void(0)" class="download-screenshot"><svg class="icon icon-download">
+                                                                <use xlink:href="/assets/img/spritesvg.svg?v39.26#ic_download"></use>
+                                                            </svg>Download puzzle image</a></div>
+                                                    <div class="desc ads" style="display: none;">Sponsored (Opens in a new tab)</div>
+                                                    <div class="game_ad_container" style="display: none;">
+                                                        <div class="game_ad"><ins class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px;" data-ad-client="ca-pub-1851068468056357" data-ad-slot="3099052468"></ins></div>
+                                                    </div>
+                                                    <div class="game_ad_container" style="display: none;">
+                                                        <div class="game_ad_mobile"><ins class="adsbygoogle" style="display: inline-block; width: 320px; height: 100px;" data-ad-client="ca-pub-1851068468056357" data-ad-slot="5342072421"></ins></div>
+                                                    </div>
+                                                </div>
+                                            </div><button type="button" class="close"><svg width="12" height="12">
+                                                    <use xlink:href="/assets/img/spritesvg.svg?v39.26#ic_close"></use>
+                                                </svg></button>
+                                        </div>
+                                        <div class="mini_modal" id="modal_stats">
+                                            <div class="top">Statistics</div>
+                                            <div class="data">
+                                                <div class="cont">
+                                                    <div class="stats flex">
+                                                        <div class="item">
+                                                            <div class="val">0</div>
+                                                            <div class="desc">🕹️ Games Played</div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <div class="val">0</div>
+                                                            <div class="desc">🏆 Games Won</div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <div class="val">0</div>
+                                                            <div class="desc">📈 % of Wins</div>
+                                                        </div>
+                                                        <div class="item">
+                                                            <div class="val">0</div>
+                                                            <div class="desc">⚡️ Max Streak</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="block_share">
+                                                        <div class="share_btn"><button type="button">Share your stats</button></div>
+                                                        <div class="links flex"><a class="twitter_btn"
+                                                                href="https://www.twitter.com/share?url=https://wordlegame.org/&amp;text=My%20Wordle%20Stats%3A%20%0A0%20Games%20played%2C%20%0A0%20Games%20won%2C%20%0A0%25%20of%20Games%20won%2C%20%0A0%20Max%20Streak"
+                                                                target="_blank">Twitter</a><a class="facebook_btn" href="https://www.facebook.com/sharer/sharer.php?u=https://wordlegame.org/" target="_blank">Facebook</a><a class="whatsapp_btn"
+                                                                href="https://api.whatsapp.com/send?text=My%20Wordle%20Stats%3A%20%0A0%20Games%20played%2C%20%0A0%20Games%20won%2C%20%0A0%25%20of%20Games%20won%2C%20%0A0%20Max%20Streak"
+                                                                target="_blank">WhatsApp</a><a class="reddit_btn"
+                                                                href="https://www.reddit.com/submit?url=https://wordlegame.org/&amp;title=My%20Wordle%20Stats%3A%20%0A0%20Games%20played%2C%20%0A0%20Games%20won%2C%20%0A0%25%20of%20Games%20won%2C%20%0A0%20Max%20Streak"
+                                                                target="_blank">Reddit</a></div>
+                                                    </div>
+                                                    <div class="chart">
+                                                        <div class="main_title center">Best tries distribution</div>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="number">#1</td>
+                                                                <td>
+                                                                    <div class="percentage">0%</div>
+                                                                </td>
+                                                                <td class="amount">0</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="number">#2</td>
+                                                                <td>
+                                                                    <div class="percentage">0%</div>
+                                                                </td>
+                                                                <td class="amount">0</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="number">#3</td>
+                                                                <td>
+                                                                    <div class="percentage">0%</div>
+                                                                </td>
+                                                                <td class="amount">0</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="number">#4</td>
+                                                                <td>
+                                                                    <div class="percentage">0%</div>
+                                                                </td>
+                                                                <td class="amount">0</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="number">#5</td>
+                                                                <td>
+                                                                    <div class="percentage">0%</div>
+                                                                </td>
+                                                                <td class="amount">0</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="number">#6</td>
+                                                                <td>
+                                                                    <div class="percentage">0%</div>
+                                                                </td>
+                                                                <td class="amount">0</td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div><button type="button" class="close"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mini_modal" id="modal_info">
+                                <div class="top">How to play</div>
+
+                                <div class="data">
+                                    <div class="cont">
+                                        <div class="info">
+
+                                            <div class="text">
+                                                You have to guess the hidden word in 6 tries and the color of the letters changes to show how close you are.<br>
+                                            </div>
+
+                                            <div class="text">
+                                                To start the game, just enter any word, for example:
+                                            </div>
+
+                                            <div class="word flex">
+                                                <div class="letter">T</div>
+                                                <div class="letter yellow_letter">A</div>
+                                                <div class="letter">B</div>
+                                                <div class="letter yellow_letter">L</div>
+                                                <div class="letter green_letter">E</div>
+                                            </div>
+
+                                            <div class="text text-tiles">
+                                                <b class="grey_text">T</b> , <b class="grey_text">B</b> aren't in the target word at all.<br>
+                                                <b class="yellow_text">A</b> , <b class="yellow_text">L</b> is in the word but in the wrong spot.<br>
+                                                <b class="green_text">E</b> is in the word and in the correct spot.<br>
+                                            </div>
+                                            <div class="text">
+                                                Another try to find matching letters in the target word.
+                                            </div>
+
+                                            <div class="word flex">
+                                                <div class="letter green_letter">F</div>
+                                                <div class="letter green_letter">L</div>
+                                                <div class="letter green_letter">A</div>
+                                                <div class="letter">S</div>
+                                                <div class="letter">H</div>
+                                            </div>
+
+                                            <div class="text">
+                                                So close!
+                                            </div>
+
+                                            <div class="word flex">
+                                                <div class="letter green_letter">F</div>
+                                                <div class="letter green_letter">L</div>
+                                                <div class="letter green_letter">A</div>
+                                                <div class="letter green_letter">M</div>
+                                                <div class="letter green_letter">E</div>
+                                            </div>
+
+                                            <div class="text">
+                                                <b>Got it! 🏆</b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="button" class="close"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container no-pading">
+                        <div class="banner banner_middle">
+
+                        </div>
+                        <div class="banner banner_middle_mobile">
+
+                        </div>
+                    </div>
+
+                    <div class="numberle"><a href="https://numberle.org/" target="_blank">
+                            <img src="https://numberle.org/favicon-32x32.png">Numberle</a> (Math Game like Wordle)
+                        <div class="numberle_btn"><a href="https://numberle.org/" target="_blank">Play Now</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section--green">
+                <div class="container">
+                    <div class="headline">
+                        <h1 class="headline__title">Wordle Game: Guess the Hidden Word</h1>
+                        <h2 class="headline__text">The rules are very simple: You need to guess the hidden word (from 4 to 11 letters) in 6 tries. To get started, just type any word on the first line. If the letter is guessed correctly and is in the
+                            correct place, it will be highlighted in green, if the letter is in the word, but in the wrong place - in yellow, and if the letter is not in the word, it will remain gray. Can you guess the hidden word in 6 tries?</h2>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section--grey">
+                <div class="container">
+                    <div class="wordle-text">
+                        <h2 class="info_text">Play Wordle with Various Number of Letters</h2>
+                        <p class="info_text_p">Choose a word puzzle with the length of the hidden word from 4 to 11 letters.</p>
+                    </div>
+                    <div class="links">
+                        <a class="links__link letters" href="/4-letter-words-wordle">4 Letter Words</a>
+                        <a class="links__link letters" href="/5-letter-words-wordle">5 Letter Words</a>
+                        <a class="links__link letters" href="/6-letter-words-wordle">6 Letter Words</a>
+                        <a class="links__link letters" href="/7-letter-words-wordle">7 Letter Words</a>
+                        <a class="links__link letters" href="/8-letter-words-wordle">8 Letter Words</a>
+                        <a class="links__link letters" href="/9-letter-words-wordle">9 Letter Words</a>
+                        <a class="links__link letters" href="/10-letter-words-wordle">10 Letter Words</a>
+                        <a class="links__link letters" href="/11-letter-words-wordle">11 Letter Words</a>
+                    </div>
+                </div>
+            </section>
+            <section class="section section--grey">
+                <div class="container">
+                    <div class="wordle-text">
+                        <h2 class="info_text">Play Wordle in Different Languages</h2>
+                        <p class="info_text_p">Guess the hidden words in different languages! It will be helpful for learning new words and improving foreign language skills.</p>
+                    </div>
+
+                    <div class="links">
+                        <div class="links__link active">
+                            <svg class="icon ">
+                                <use xlink:href="/assets/img/spritesvg.svg?v39.26#en"></use>
+                            </svg>English (US)
+                        </div>
+                        <a class="links__link" href="/uk">
+                            <svg class="icon ">
+                                <use xlink:href="/assets/img/spritesvg.svg?v39.26#uk"></use>
+                            </svg>English (UK)
+                        </a>
+                        <a class="links__link" href="/es">
+                            <svg class="icon ">
+                                <use xlink:href="/assets/img/spritesvg.svg?v39.26#es"></use>
+                            </svg>Español
+                        </a>
+                        <a class="links__link" href="/fr">
+                            <svg class="icon ">
+                                <use xlink:href="/assets/img/spritesvg.svg?v39.26#fr"></use>
+                            </svg>Français
+                        </a>
+                        <a class="links__link" href="/de">
+                            <svg class="icon ">
+                                <use xlink:href="/assets/img/spritesvg.svg?v39.26#de"></use>
+                            </svg>Deutsch
+                        </a>
+                        <a class="links__link" href="/pt">
+                            <svg class="icon ">
+                                <use xlink:href="/assets/img/spritesvg.svg?v39.26#pt"></use>
+                            </svg>Português
+                        </a>
+                        <a class="links__link" href="/it">
+                            <svg class="icon ">
+                                <use xlink:href="/assets/img/spritesvg.svg?v39.26#it"></use>
+                            </svg>Italiano
+                        </a>
+                        <a class="links__link" href="/nl">
+                            <svg class="icon ">
+                                <use xlink:href="/assets/img/spritesvg.svg?v39.26#nl"></use>
+                            </svg>Nederlands
+                        </a>
+                        <a class="links__link" href="/ru">
+                            <svg class="icon ">
+                                <use xlink:href="/assets/img/spritesvg.svg?v39.26#ru"></use>
+                            </svg>Русский
+                        </a>
+                        <a class="links__link" href="/pl">
+                            <svg class="icon ">
+                                <use xlink:href="/assets/img/spritesvg.svg?v39.26#pl"></use>
+                            </svg>Polski
+                        </a>
+                        <a class="links__link" href="/ua">
+                            <svg class="icon ">
+                                <use xlink:href="/assets/img/spritesvg.svg?v39.26#ua"></use>
+                            </svg>Український
+                        </a>
+                        <a class="links__link" href="/sv">
+                            <svg class="icon ">
+                                <use xlink:href="/assets/img/spritesvg.svg?v39.26#sv"></use>
+                            </svg>Svenska
+                        </a>
+                        <a class="links__link" href="/ie">
+                            <svg class="icon ">
+                                <use xlink:href="/assets/img/spritesvg.svg?v39.26#ie"></use>
+                            </svg>Gaeilge
+                        </a>
+                        <a class="links__link" href="/cs">
+                            <svg class="icon ">
+                                <use xlink:href="/assets/img/spritesvg.svg?v39.26#cs"></use>
+                            </svg>Čeština
+                        </a>
+                        <a class="links__link" href="/el">
+                            <svg class="icon ">
+                                <use xlink:href="/assets/img/spritesvg.svg?v39.26#el"></use>
+                            </svg>Ελληνικά
+                        </a>
+                        <a class="links__link" href="/tr">
+                            <svg class="icon ">
+                                <use xlink:href="/assets/img/spritesvg.svg?v39.26#tr"></use>
+                            </svg>Türkçe
+                        </a>
+                        <a class="links__link" href="/id">
+                            <svg class="icon ">
+                                <use xlink:href="/assets/img/spritesvg.svg?v39.26#id"></use>
+                            </svg>Indonesian
+                        </a>
+                        <a class="links__link" href="/ph">
+                            <svg class="icon ">
+                                <use xlink:href="/assets/img/spritesvg.svg?v39.26#ph"></use>
+                            </svg>Filipino
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="wordle-text">
+                        <h2 class="h2--center">How to play the Wordle Game?</h2>
+                        <ol class="ol">
+                            <li>
+                                <h3>Enter the first word</h3><span>To get started, simply enter any five-letter word to find out which letters match the hidden word. In total, you will have 6 tries to guess the hidden word.</span>
+                                <img src="https://wordlegame.org/assets/img/wordle-how-to-1.png" alt="Enter the first word" title="Enter the first word">
+                            </li>
+                            <li>
+                                <h3>Find out what letters are in the hidden word</h3><span>If any letters are marked in yellow, this means that this letter is in the hidden word, but doesn't match the exact location in this word. If any letter is
+                                    marked in green, then it is in that word and is in the exact location. If the letter remains gray, then it isn't in the hidden word.</span>
+                                <img src="https://wordlegame.org/assets/img/wordle-how-to-2.png" alt="Find out what letters are in the hidden word" title="Find out what letters are in the hidden word">
+                            </li>
+                            <li>
+                                <h3>Try to guess the hidden word</h3><span>Now if you know a few letters with the exact location (green) and a few letters that are in the word (yellow) you can try to solve the hidden word and win the game!</span>
+                                <img src="https://wordlegame.org/assets/img/wordle-how-to-3.png" alt="Try to guess the hidden word" title="Try to guess the hidden word">
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section--grey">
+                <div class="container">
+                    <div class="wordle-text">
+                        <h2 class="info_text">Make Your Own Wordle Puzzle</h2>
+                        <p class="info_text_p">Generate your own Wordle puzzle with any word from 4 to 11 letters and challenge your friends! Can your friend guess the hidden word in 6 tries?</p>
+                    </div>
+                    <div class="btn-center">
+                        <a class="btn generator" href="/wordle-generator">
+                            <svg class="icon ">
+                                <use xlink:href="/assets/img/spritesvg.svg?v39.26#ic_generator"></use>
+                            </svg>Create Wordle Puzzle
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="wordle-text">
+                        <h2 class="info_text">Wordle Game for Kids</h2>
+                        <p class="info_text_p">This edition of the Wordle for kids contains a dictionary of words for children up to 8th grade and has a word length starting from 3 letters. This game will be very useful for developing memory and
+                            logical thinking skills in children.</p>
+                    </div>
+                    <div class="btn-center">
+                        <a class="btn" href="https://wordlegame.org/wordle-for-kids">
+                            <svg class="icon ">
+                                <use xlink:href="/assets/img/spritesvg.svg?v39.26#kids"></use>
+                            </svg>Play Wordle for Kids
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section--grey">
+                <div class="container">
+                    <div class="faq">
+                        <h2>Frequently Asked Questions</h2>
+                        <ol>
+                            <li>
+                                <h3>What are the rules of the Wordle game?</h3>
+                                <p>The main goal of the game is to guess the hidden word in 6 tries. In each line, you need to enter any word from 4 to 11 letters to find out what letters are in the target word. Depending on which word you entered,
+                                    the letters will be highlighted in three colors.
+                                    <br><b>Color marking:</b>
+                                    <br><span></span>The letter isn't in the target word at all.
+                                    <br><span class="yellow"></span> The letter is in the word but in the wrong spot.
+                                    <br><span class="green"></span> The letter is in the word and in the correct spot.
+
+                                </p>
+                                <p>To win you need to completely guess the hidden word (all letters are <span class="green"></span> green).
+                                </p>
+                            </li>
+                            <li>
+                                <h3>What is the best word to start the game?</h3>
+                                <p>At the beginning of the game, try to use a word without repeating letters and with as many vowels as possible, such as the word "RADIO". However, mathematician Grant Sanderson found that the best starting word is
+                                    “CRANE" or “SLOTH”, which includes frequently used letters.</p>
+                            </li>
+                            <li>
+                                <h3>What dictionary are you using?</h3>
+                                <p>In American English, we use a dictionary from the <a href="https://github.com/words/an-array-of-english-words" target="_blank" rel="”nofollow”">Letterpress word list</a> that includes a list of ~275,000 words. This
+                                    dictionary is constantly updated with new words based on real feedback from people.</p>
+                            </li>
+                            <li>
+                                <h3>Why did I get a "Word not found" message?</h3>
+                                <p>This alert message means that the given word was not found in our word bank. Try another word, or if you think the word is correct, <a href="mailto:hello@wordlegame.org">let us know.</a></p>
+                            </li>
+                            <li>
+                                <h3>The hidden word was incorrect. Can you fix this?</h3>
+                                <p>If you think that the hidden word is wrong or incorrect, <a href="mailto:hello@wordlegame.org">let us know</a>. We will definitely fix this as soon as possible.</p>
+                            </li>
+                            <li>
+                                <h3>How to change the entered letter?</h3>
+                                <p>If you want to change an incorrectly entered letter, just press the "Backspace" button, but remember that you cannot change the entered word.</p>
+                            </li>
+                            <li>
+                                <h3>How to download this game?</h3>
+                                <p>At the moment we don’t have applications in App store and Google Play (in development). But you can bookmark the site and play on PC or mobile devices right in your browser.</p>
+                            </li>
+                            <li>
+                                <h3>Can I guess a word to challenge my friends?</h3>
+                                <p>Certainly! Just click on the icon (W+) in the top left corner, then guess any word from 4 to 11 letters (without spaces, hyphens, apostrophes) and click the "Copy Link" button. If this word is found in our word
+                                    bank, the link will be copied to the clipboard and then you can easily share it on social media.</p>
+                            </li>
+                            <li>
+                                <h3>Can I play in different languages?</h3>
+                                <p>We have developed many versions of the Wordle Game for different languages and dictionaries. Now you can play in American English, UK English, Spanish, French, German, Portuguese, Italian, Dutch, Russian, Polish,
+                                    Swedish, Irish, Czech, Greek, Turkish, Indonesian, and Filipino.</p>
+                            </li>
+                            <li>
+                                <h3>The game seems easy to me. Can I make it harder?</h3>
+                                <p>You can make the game harder by turning on "Hard Mode" in the settings. Then any revealed hints must be used in subsequent guesses.</p>
+                            </li>
+                            <li>
+                                <h3>Can kids play Wordle?</h3>
+                                <p>Wordle is suitable for all ages. This game will be especially useful for children to develop memory and logical thinking skills. We have developed a special <a href="https://wordlegame.org/wordle-for-kids">edition
+                                        for kids</a> with a dictionary for children up to 8th grade, and the ability to select a target word from 3 letters to 11 letters.</p>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="wordle-text">
+
+                        <h2 class="h2--center" style="margin-bottom:0;">Latest updates</h2>
+
+                        <ul style="margin-top: 0;">
+                            <h3>March 5, 2022</h3>
+                            <li>Play Wordle in <a href="https://wordlegame.org/ua">Ukrainian</a> <sup>New!</sup></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section--rate">
+                <div class="container">
+                    <div class="rate">
+                        <div class="rate__title">Rate WordleGame.org:</div>
+                        <div class="rate__stars">
+                            <fieldset class="starability-basic" data-section="index">
+                                <input class="input-no-rate" id="no-rate" type="radio" name="rating" value="0" checked="" aria-label="No rating" autocomplete="off">
+                                <input id="first-rate1" type="radio" name="rating" value="1" autocomplete="off">
+                                <label class="hint" for="first-rate1" title="Awful"><span class="hint__hidden">Awful</span></label>
+                                <input id="first-rate2" type="radio" name="rating" value="2" autocomplete="off">
+                                <label class="hint" for="first-rate2" title="Poor"><span class="hint__hidden">Poor</span></label>
+                                <input id="first-rate3" type="radio" name="rating" value="3" autocomplete="off">
+                                <label class="hint" for="first-rate3" title="Average"><span class="hint__hidden">Average</span></label>
+                                <input id="first-rate4" type="radio" name="rating" value="4" autocomplete="off">
+                                <label class="hint" for="first-rate4" title="Good"><span class="hint__hidden">Good</span></label>
+                                <input id="first-rate5" type="radio" name="rating" value="5" autocomplete="off">
+                                <label class="hint" for="first-rate5" title="Excellent"><span class="hint__hidden">Excellent</span></label>
+                            </fieldset>
+                        </div>
+                        <div class="rate__numbers"><b>4.7</b> / 5</div>
+                        <div class="rate__votes"><span>8,495</span> votes</div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="sharethis-inline-share-buttons st-center st-has-labels  st-inline-share-buttons st-animated" id="st-1">
+                <div class="st-total ">
+                    <span class="st-label"></span>
+                    <span class="st-shares">
+                        Shares
+                    </span>
+                </div>
+                <div class="st-btn st-first" data-network="facebook" style="display: inline-block;">
+                    <img alt="facebook sharing button" src="https://platform-cdn.sharethis.com/img/facebook.svg">
+                    <span class="st-label">Share</span>
+                </div>
+                <div class="st-btn" data-network="twitter" style="display: inline-block;">
+                    <img alt="twitter sharing button" src="https://platform-cdn.sharethis.com/img/twitter.svg">
+                    <span class="st-label">Tweet</span>
+                </div>
+                <div class="st-btn" data-network="whatsapp" style="display: inline-block;">
+                    <img alt="whatsapp sharing button" src="https://platform-cdn.sharethis.com/img/whatsapp.svg">
+                    <span class="st-label">Share</span>
+                </div>
+                <div class="st-btn" data-network="messenger" style="display: inline-block;">
+                    <img alt="messenger sharing button" src="https://platform-cdn.sharethis.com/img/messenger.svg">
+                    <span class="st-label">Share</span>
+                </div>
+                <div class="st-btn st-last" data-network="reddit" style="display: inline-block;">
+                    <img alt="reddit sharing button" src="https://platform-cdn.sharethis.com/img/reddit.svg">
+                    <span class="st-label">Share</span>
+                </div>
+            </div>
+
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__top">
+                    <a class="footer__logo" href="/">
+                        <img src="/assets/img/logo.svg?v39.26" alt="Wordle Game - Play Unlimited">
+                    </a>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__copir">WordleGame.org © 2022</div>
+                    <ul class="footer__links">
+                        <li><a href="mailto:hello@wordlegame.org?subject=WordleGame">Feedback</a></li>
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer__message">Wordlegame.org is not affiliated with "Wordle" by NYTimes, "Wordle!", or "Wordle" apps in any way.</div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="supports_error">
+        Your browser is outdated, we recommend updating it to the latest version<br> or using another more modern one.
+    </div>
+
+</body>
+
+</html>
