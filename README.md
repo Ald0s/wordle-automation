@@ -7,6 +7,21 @@ A small NodeJS app that can automatically solve Wordle puzzles, using regular ex
 * Supports multiple word lengths,
 * Supports backspacing and retrying words.
 
+#### How to use
+```
+# Clone the repo.
+
+# Install packages
+npm install
+
+# Run tests
+http-server ./testhtml
+npm test
+
+# Run app
+node index.js
+```
+
 #### Configuration
 All configuration can be found in [conf.js](conf.js)
 
