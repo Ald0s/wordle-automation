@@ -220,16 +220,26 @@ async function endGame(currentGame) {
     }
 }
 
+/*
+Called after a word has been attempted, locked in and results for it read. This function will improve the future suggestions for words by
+setting correct letters, blacklisting absent letters and prioritising elsewhere letters where applicable.
+The basic rules are;
+    1. If a letter is absent, it isn't anywhere in the word; add it to absentLetters.
+    2. If a letter is elsewhere, it is somewhere ELSE in the word;
+        -> It must be added to grandSlots as 'never' under itself.
+        -> It must be added to grandSlots as 'priority' under other. (unless it already exists under 'never' or 'priority' within other)
+    3. If a letter is correct, it is correct in the position it's currently in;
+        -> It must be added to grandSlots as 'home' under itself.
+
+Arguments:
+:currentGame: Our state object.
+:word: The attempted word.
+:equivalentGameRow: The row from Game::gameRows equivalent to the latest attempt's row.
+
+Returns:
+--
+*/
 async function updateLetterMemory(currentGame, word, equivalentGameRow) {
-    /*
-    The basic rules are;
-        1. If a letter is absent, it isn't anywhere in the word; add it to absentLetters.
-        2. If a letter is elsewhere, it is somewhere ELSE in the word;
-            -> It must be added to grandSlots as 'never' under itself.
-            -> It must be added to grandSlots as 'priority' under other. (unless it already exists under 'never' or 'priority' within other)
-        3. If a letter is correct, it is correct in the position it's currently in;
-            -> It must be added to grandSlots as 'home' under itself.
-    */
     console.log(`Committing word '${word}' to letter memory...`);
     for(var letterIndex = 0; letterIndex < equivalentGameRow.length; letterIndex++) {
         let letter = equivalentGameRow[letterIndex];
@@ -278,7 +288,7 @@ async function updateLetterMemory(currentGame, word, equivalentGameRow) {
 }
 
 /*
-Post wordAttempted, performs calculations for ongoing analytics data about the game.
+Post wordAttempted, performs calculations for ongoing analytical data about the game.
 Results are posted to the given currentGame.
 */
 async function updateGameMetrics(currentGame) {
@@ -305,9 +315,12 @@ Called when puppeteer attempts a word and reads the response. This function will
 to the given state; which will update ongoing information/guesses on the next word.
 
 Arguments:
-:gameState: Our stateful object.
+:currentGame: Our Game object.
 :word: The word, in lowercase ASCII, that was just attempted.
 :attemptedRowState: The result of data::makeRowState(), a RowState describing the latest row, procured after the word was attempted.
+
+Returns:
+The current Game object.
 */
 async function wordAttempted(currentGame, word, attemptedRowState) {
     console.log(`Word '${word}' has been attempted. Processing state...`);
@@ -356,7 +369,14 @@ async function wordAttempted(currentGame, word, attemptedRowState) {
 }
 
 /*
+Called when Wordle does not accept a word. Simply adds the word to usedWords.
 
+Arguments:
+:currentGame: Our Game instance.
+:word: The word not accepted.
+
+Returns:
+--
 */
 async function wordNotAccepted(currentGame, word) {
     console.log(`Word ${word} is not accepted. Adding it to used words.`);
