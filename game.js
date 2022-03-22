@@ -1,5 +1,69 @@
 const data = require("./data");
 
+const SettingsState = {
+    CLOSED: 0,
+    OPEN: 1
+};
+
+/*
+Finding values for the settings modal.
+*/
+const MODAL_SETTINGS_ACTIVE = "#modal_settings[class='mini_modal active']";
+const MODAL_SETTINGS_INACTIVE = "#modal_settings[class='mini_modal']";
+
+/*
+Finding values for the open settings button and close settings button.
+*/
+const OPEN_SETTINGS_BUTTON = ".buttons.flex button[data-modal-id='#modal_settings']";
+const CLOSE_SETTINGS_BUTTON = "#modal_settings[class='mini_modal active'] > button[class='close']";
+
+/*
+Given a page, query the current state of the settings modal.
+
+Arguments:
+:page: An instance of Page.
+
+Returns:
+One of the SettingsState enum indicating the settings modal state.
+*/
+async function getCurrentSettingsState(page) {
+    return await Promise.allSettled([
+        page.waitForSelector(MODAL_SETTINGS_ACTIVE, {
+            timeout: 800
+        }),
+        page.waitForSelector(MODAL_SETTINGS_INACTIVE, {
+            timeout: 800
+        })
+    ]).then((results) => (results[0].status === "fulfilled" && results[1].status === "rejected") ? SettingsState.OPEN : SettingsState.CLOSED);
+}
+
+/*
+Given a page open to a game of Wordle, ensure that the settings modal is in the given state.
+
+Arguments:
+:page: An instance of Page.
+:requiredState: One of the SettingState enums.
+*/
+async function ensureSettingsAre(page, requiredState) {
+    let isSettingsActive = (await getCurrentSettingsState(page)) === SettingsState.OPEN;
+    let shouldSettingsBeActive = requiredState === SettingsState.OPEN;
+
+    if(shouldSettingsBeActive !== isSettingsActive) {
+        console.log(`Settings modal open: ${isSettingsActive}, it should be ${shouldSettingsBeActive}`);
+        if(shouldSettingsBeActive) {
+            // Locate open settings button & click it.
+            await page.waitForSelector(OPEN_SETTINGS_BUTTON, { timeout: 2000 })
+                .then((openSettings) => openSettings.click())
+                .then((clicked) => page.waitForSelector(MODAL_SETTINGS_ACTIVE, { timeout: 2000 }));
+        } else {
+            // Locate close settings button & click it.
+            await page.waitForSelector(CLOSE_SETTINGS_BUTTON, { timeout: 2000 })
+                .then((closeSettings) => closeSettings.click())
+                .then((clicked) => page.waitForSelector(MODAL_SETTINGS_INACTIVE, { timeout: 2000 }));
+        }
+    }
+}
+
 /*
 Read the game container from the given page.
 This will throw an exception if the page is not on a wordle game.
@@ -321,6 +385,10 @@ async function clearRow(page, liveGameState, liveRowState) {
     console.log(`Successfully reversed typing on row ${liveRowState.rowState.rowIndex}`);
     return latestLiveRowState;
 }
+
+exports.SettingsState = SettingsState;
+exports.getCurrentSettingsState = getCurrentSettingsState;
+exports.ensureSettingsAre = ensureSettingsAre;
 
 exports.getLetterCount = getLetterCount;
 exports.getRowCount = getRowCount;

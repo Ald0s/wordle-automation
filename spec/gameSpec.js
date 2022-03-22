@@ -5,8 +5,21 @@ Install http-server, then run server from /testhtml
     npm install http-server -g
     http-server ./testhtml
 */
+const conf = require("../conf");
 const game = require("../game");
 const puppeteer = require("puppeteer");
+
+const assert = require("assert");
+
+/*
+Selector for querying each 'input' of type radio that are internal to each options under 'number of letters'
+*/
+const NUM_LETTERS_RADIO = ".numbers.flex > .number_checkbox > label > input";
+
+/*
+Selector for querying each number of letters option.
+*/
+const NUM_LETTERS_CHECKBOX = ".numbers.flex > .number_checkbox";
 
 describe("game", () => {
     let browser = null;
@@ -78,6 +91,28 @@ describe("game", () => {
         let thirdRowLetters = latestRowStates[2].latestLetterStates;
         for(var i = 0; i < thirdRowLetters.length; i++) {
             expect(thirdRowLetters[i].letterState.isLetterAttempted).toBe(false);
+        }
+    });
+
+    fit("should read settings properly", async () => {
+        // First, get the numbers flex.
+        let numbers = await page.$(".numbers.flex");
+        if(numbers === null) {
+            throw "Failed to updateConfiguration - couldn't find the '.numbers.flex' class, has it changed?";
+        }
+        // Locate the number of letters we're currently playing.
+        let numLettersSelected = await numbers.$eval(".number_checkbox input[type='radio']:checked", (input) => input.getAttribute("value"))
+            .then((value) => parseInt(value));
+        // Do we need to change this setting?
+        if(numLettersSelected !== conf.NUMBER_OF_LETTERS) {
+            console.log(`Changing NUMBER OF LETTERS setting from ${numLettersSelected} to ${conf.NUMBER_OF_LETTERS}`);
+            // Locate a map containing the number of letters for each option item.
+            let letterOptions = await page.$$(NUM_LETTERS_CHECKBOX);
+            let numLettersAtEach = await page.$$eval(NUM_LETTERS_RADIO, (numLettersInputs) => numLettersInputs.map(input => parseInt(input.getAttribute("value"))));
+            assert(letterOptions.length == numLettersAtEach.length);
+            // Select the letterOption with the number given by conf.
+            let targetNumLetter = letterOptions[ numLettersAtEach.indexOf(conf.NUMBER_OF_LETTERS) ];
+            console.log(targetNumLetter);
         }
     });
 });

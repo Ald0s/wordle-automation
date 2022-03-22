@@ -53,6 +53,7 @@ async function printResultsToGrid(masterGameResult) {
         rows: rows
     };
     var lines = grid.render(data);
+    console.log(lines);
 }
 
 exports.printResultsToGrid = printResultsToGrid;

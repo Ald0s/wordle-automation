@@ -1,12 +1,10 @@
 
 /*
-TODO:
 Change the number of letters.
 */
 const NUMBER_OF_LETTERS = 5;
 
 /*
-TODO:
 If true, we will make sure the game is on 'daily mode' before continuing.
 */
 const PLAY_DAILY_MODE = false;
@@ -15,6 +13,11 @@ const PLAY_DAILY_MODE = false;
 Number of games to play before finishing the session and reporting results.
 */
 const NUM_GAMES_TO_PLAY = 20;
+
+/*
+Alphabet to use for the game.
+*/
+const ASCII = Array.from("abcdefghijklmnopqrstuvwxyz");
 
 /*
 Ad providers - add a block if you want.
@@ -55,11 +58,6 @@ const BLOCKED_RESOURCE = [
     "adlightning",
     "4dex.io",
 ];
-
-/*
-Alphabet to use for the game.
-*/
-const ASCII = Array.from("abcdefghijklmnopqrstuvwxyz");
 
 exports.NUMBER_OF_LETTERS = NUMBER_OF_LETTERS;
 exports.PLAY_DAILY_MODE = PLAY_DAILY_MODE;

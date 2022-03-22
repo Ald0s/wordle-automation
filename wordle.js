@@ -19,6 +19,41 @@ If this is false, this will ignore number of games to play, and will trigger an 
 var SHOULD_RESTART = true;
 
 /*
+The index of elements .checkbox to assume is the daily mode checkbox on the settings modal.
+*/
+const DAILY_MODE_CHECKBOX_INDEX = 1;
+
+/*
+The index of elements .checkbox to assume is the dark mode checkbox on the settings modal.
+*/
+const DARK_MODE_CHECKBOX_INDEX = 2;
+
+/*
+Selector for querying all toggle checkboxes.
+*/
+const CHECKBOX = ".checkbox";
+
+/*
+Selector for finding inner input for checkboxes.
+*/
+const CHECKBOX_TOGGLE_RADIO = "input[type='checkbox']";
+
+/*
+Selector for finding inner input in the checked state.
+*/
+const CHECKBOX_TOGGLE_RADIO_CHECKED = "input[type='checkbox']:checked";
+
+/*
+Selector for querying each 'input' of type radio that are internal to each options under 'number of letters'
+*/
+const NUM_LETTERS_RADIO = ".numbers.flex > .number_checkbox > label > input";
+
+/*
+Selector for querying each number of letters option.
+*/
+const NUM_LETTERS_CHECKBOX = ".numbers.flex > .number_checkbox";
+
+/*
 Determines whether the current page has a valid wordle game running.
 Returns true if so, false otherwise.
 
@@ -30,7 +65,62 @@ Returns:
 */
 async function isWordleGameValid(page) {
     let gameRowsConainer = await page.$(".App-container > .Game > .game_rows");
-    return gameRowsConainer !== null && gameRowsConainer !== undefined;
+    return gameRowsConainer !== null;
+}
+
+/*
+Given an instance of Page, which should already be on a game of Wordle, ensure the configuration provided by the user in conf
+is matched by the current game settings.
+
+Arguments:
+:page: An instance of Page.
+
+:Returns:
+--
+*/
+async function updateConfiguration(page) {
+    // Open Wordle's settings.
+    await game.ensureSettingsAre(page, game.SettingsState.OPEN);
+    // First, get the numbers flex.
+    let numbers = await page.$(".numbers.flex");
+    if(numbers === null) {
+        throw "Failed to updateConfiguration - couldn't find the '.numbers.flex' class, has it changed?";
+    }
+    // Locate the number of letters we're currently playing.
+    let numLettersSelected = await numbers.$eval(".number_checkbox input[type='radio']:checked", (input) => input.getAttribute("value"))
+        .then((value) => parseInt(value));
+    // Do we need to change this setting?
+    if(numLettersSelected !== conf.NUMBER_OF_LETTERS) {
+        console.log(`Changing NUMBER OF LETTERS setting from ${numLettersSelected} to ${conf.NUMBER_OF_LETTERS}`);
+        // Locate a map containing the number of letters for each option item.
+        let letterOptions = await page.$$(NUM_LETTERS_CHECKBOX);
+        let numLettersAtEach = await page.$$eval(NUM_LETTERS_RADIO, (numLettersInputs) => numLettersInputs.map(input => parseInt(input.getAttribute("value"))));
+        assert(letterOptions.length == numLettersAtEach.length);
+        // Select the letterOption with the number given by conf.
+        let targetNumLetter = letterOptions[ numLettersAtEach.indexOf(conf.NUMBER_OF_LETTERS) ];
+        await targetNumLetter.click()
+            .then((clicked) => numbers.waitForSelector(`.number_checkbox input[value='${conf.NUMBER_OF_LETTERS}']:checked`));
+    }
+
+    // Locate all checkboxes.
+    let toggleCheckboxes = await page.$$(CHECKBOX);
+    // Grab the one at index specified above.
+    let dailyMode = toggleCheckboxes[ DAILY_MODE_CHECKBOX_INDEX ];
+    if(dailyMode === null || dailyMode === undefined) {
+        console.log("Failed to check/update daily mode toggle - we couldn't find it.");
+    } else {
+        // Determine if the toggle it checked.
+        let isDailyModeEnabled = await dailyMode.$eval(CHECKBOX_TOGGLE_RADIO, (checkInput) => checkInput.checked);
+        if(isDailyModeEnabled !== conf.PLAY_DAILY_MODE) {
+            console.log(`Changing PLAY DAILY MODE setting from ${isDailyModeEnabled} to ${conf.PLAY_DAILY_MODE}`);
+            // Click the dailyMode element, then wait for selector 'input[type="checkbox"]:checked'
+            await dailyMode.click()
+                .then((clicked) => dailyMode.waitForSelector(CHECKBOX_TOGGLE_RADIO_CHECKED, { timeout: 2000 }));
+        }
+    }
+    console.log("Finishing updating configuration!");
+    // Close Wordle's settings.
+    await game.ensureSettingsAre(page, game.SettingsState.CLOSED);
 }
 
 /*
@@ -190,16 +280,17 @@ Returns:
 MasterResult object, describing how all the games went.
 */
 async function playWordle(page) {
+    // Ensure we have a valid game up.
+    if(!(await isWordleGameValid(page))) {
+        throw "Failed to play Wordle; the game is invalid!";
+    }
     // Set master options from config.
     NUM_GAMES_TO_PLAY = conf.NUM_GAMES_TO_PLAY;
-    
+    // Ensure our settings match that requested by the user.
+    await updateConfiguration(page);
     // Create a master game result.
     let masterGameResult = await data.makeMasterGameResult();
     do {
-        // Ensure we have a valid game up.
-        if(!(await isWordleGameValid(page))) {
-            throw "Failed to play Wordle; the game is invalid!";
-        }
         // Get the number of rows and letters per row.
         let numRows = await game.getRowCount(page);
         let numLettersPerRow = await game.getLetterCount(page);
